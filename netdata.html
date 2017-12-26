@@ -13,7 +13,7 @@
 
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="https://cloud.githubusercontent.com/assets/2662304/22945737/e98cd0c6-f2fd-11e6-96f1-5501934b0955.png"/>
-    <meta property="og:url" content="http://my-netdata.io/"/>
+    <meta property="og:url" content="http://52.3.214.105:19999/"/>
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="netdata"/>
     <meta property="og:title" content="netdata - real-time performance monitoring, done right!"/>
@@ -42,7 +42,8 @@ var netdataTheme = 'slate'; // this is dark
     and that you have chown it to be owned by netdata:netdata
 -->
 <!-- <script type="text/javascript" src="http://my.server:19999/dashboard.js"></script> -->
-<script type="text/javascript" src="dashboard.js?v20170724-7"></script>
+<!--<script type="text/javascript" src="dashboard.js?v20170724-7"></script> -->
+<script type="text/javascript" src="http://52.3.214.105:19999/dashboard.js"></script>
 
 <script>
 // Set options for TV operation
@@ -80,22 +81,347 @@ setTimeout(function(){
                     data-host="http://52.3.214.105:19999"
                     data-title="CPU usage of 105"
                     data-chart-library="dygraph"
-                    data-width="49%"
+                    data-width="24%"
                     data-height="100%"
                     data-after="-300"
                     data-dygraph-valuerange="[0, 100]"
                     ></div>
             <div data-netdata="system.cpu"
-                    data-title="CPU usage of your netdata server"
+                    data-host="http://52.3.214.106:19999"
+                    data-title="CPU usage of 106"
                     data-chart-library="dygraph"
-                    data-width="49%"
+                    data-width="24%"
                     data-height="100%"
                     data-after="-300"
                     data-dygraph-valuerange="[0, 100]"
                     ></div>
+            <div data-netdata="system.cpu"
+                    data-host="http://52.3.214.104:19999"
+                    data-title="CPU usage of 104"
+                    data-chart-library="dygraph"
+                    data-width="24%"
+                    data-height="100%"
+                    data-after="-300"
+                    data-dygraph-valuerange="[0, 100]"
+                    ></div>
+            <div data-netdata="system.ram"
+                    data-host="http://52.3.214.105:19999"
+                    data-title="CPU usage of 103"
+                    data-chart-library="dygraph"
+                    data-width="24%"
+                    data-height="100%"
+                    data-after="-300"
+                    data-dygraph-valuerange="[0, 100]"
+                    ></div>
+
         </div>
     </div>
 
+        <div style="width: 100%; max-height: calc(100% - 15px); text-align: center; display: inline-block;">
+            <div style="width: 49%; height:100%; align: center; display: inline-block;">
+            <b>Graphic Test servers</b>
+        </div>
+            <br/>
+    		<div data-netdata="system.cpu"
+                    data-host="http://52.3.214.104:19999"
+            	    data-dimensions="user"
+            	    data-chart-library="gauge"
+                    data-unist="%"
+                    data-gauge-max-value="100"
+                    data-width="10%"
+                    data-after="-60"
+                    data-points="60"
+                    data-title="104"
+                    data-units="I am alive!"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.cpu"
+                    data-host="http://52.3.214.105:19999"
+                    data-dimensions="user"
+                    data-chart-library="gauge"
+                    data-units="%"
+                    data-gauge-max-value="100"
+                    data-width="10%"
+                    data-after="-60"
+                    data-points="60"
+                    data-title="105"
+                    data-units="I am alive!"
+                    data-colors="#FF5555"
+                    ></div>
+          <div style="width: 49%; height:100%; align: center; display: inline-block;">
+        </div>
+                <div data-netdata="system.cpu"
+                    data-host="http://52.3.214.106:19999"
+                    data-dimensions="user"
+                    data-chart-library="gauge"
+                    data-units="%"
+                    data-gauge-max-value="100"
+                    data-width="10%"
+                    data-after="-60"
+                    data-points="60"
+                    data-title="106"
+                    data-units="I am alive!"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.cpu"
+                    data-host="http://52.3.214.106:19999"
+                    data-dimensions="user"
+                    data-chart-library="gauge"
+                    data-units="%"
+                    data-gauge-max-value="100"
+                    data-width="10%"
+                    data-after="-60"
+                    data-points="60"
+                    data-title="107"
+                    data-units="I am alive!"
+                    data-colors="#FF5555"
+                    ></div>
+        </div>
+    </div>
+
+        <div style="width: 100%; max-height: calc(100% - 15px); text-align: center; display: inline-block;">
+            <div style="width: 49%; height:100%; align: center; display: inline-block;">
+            <b> MEM </b>
+        </div>
+            <br/>
+                <div data-netdata="system.cpu"
+                    data-host="http://52.3.214.105:19999"
+                    data-dimensions="user"
+                    data-chart-library="gauge"
+                    data-units="%"
+                    data-gauge-max-value="100"
+                    data-width="20%"
+                    data-after="-60"
+                    data-points="60"
+                    data-title="107"
+                    data-units="I am alive!"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.ram"
+                    data-host="http://52.3.214.105:19999"
+                    data-dimensions="used"
+                    data-append-options="percentage"
+                    data-title="Used RAM"
+                    data-chart-library="easypiechart"
+                    data-units="%"
+                    data-easypiechart-max-value="100"
+                    data-width="8%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.swap"
+                    data-host="http://52.3.214.104:19999"
+                    data-dimensions="used"
+                    data-append-options="percentage"
+                    data-title="Used SWAP"
+                    data-chart-library="easypiechart"
+                    data-units="%"
+                    data-easypiechart-max-value="100"
+                    data-width="8%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.ipv4"
+                    data-host="http://52.3.214.104:19999"
+                    data-dimensions="sent"
+                    data-title="IPv4 Out"
+                    data-chart-library="easypiechart"
+                    data-units="kbps"
+                    data-width="9%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.ipv4"
+                    data-host="http://52.3.214.104:19999"
+                    data-dimensions="received"
+                    data-title="IPv4 IN"
+                    data-chart-library="easypiechart"
+                    data-units="kbps"
+                    data-width="9%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FF5555"
+                    ></div>
+    <div style="width: 100%; height: 23vh; text-align: center; display: inline-block;">
+        <div style="width: 100%; height: 15px; text-align: center; display: inline-block;">
+            <b> Server Status(CPU,MEM,SWAP,NET) </b>
+        </div>
+        <div style="width: 100%; max-height: calc(100% - 15px); text-align: center; display: inline-block;">
+            <div style="width: 49%; height:100%; align: center; display: inline-block;">
+            210.104
+            <br/>
+                <div data-netdata="system.cpu"
+                    data-host="http://52.3.214.105:19999"
+                    data-dimensions="user"
+                    data-chart-library="gauge"
+                    data-units="%"
+                    data-gauge-max-value="100"
+                    data-width="25%"
+                    data-after="-60"
+                    data-points="60"
+                    data-title="107"
+                    data-units="I am alive!"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.ram"
+                    data-host="http://52.3.214.105:19999"
+                    data-dimensions="used"
+                    data-append-options="percentage"
+                    data-title="Used RAM"
+                    data-chart-library="easypiechart"
+                    data-units="%"
+                    data-easypiechart-max-value="100"
+                    data-width="12%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.swap"
+                    data-host="http://52.3.214.104:19999"
+                    data-dimensions="used"
+                    data-append-options="percentage"
+                    data-title="Used SWAP"
+                    data-chart-library="easypiechart"
+                    data-units="%"
+                    data-easypiechart-max-value="100"
+                    data-width="12%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.ipv4"
+                    data-host="http://52.3.214.104:19999"
+                    data-dimensions="sent"
+                    data-title="IPv4 Out"
+                    data-chart-library="easypiechart"
+                    data-units="kbps"
+                    data-width="14%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.ipv4"
+                    data-host="http://52.3.214.104:19999"
+                    data-dimensions="received"
+                    data-title="IPv4 IN"
+                    data-chart-library="easypiechart"
+                    data-units="kbps"
+                    data-width="14%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FF5555"
+                    ></div>
+            </div>
+            <div style="width: 49%; height:100%; align: center; display: inline-block;">
+            214.105
+            <br/>
+                <div data-netdata="system.cpu"
+                    data-host="http://52.3.214.105:19999"
+                    data-dimensions="user"
+                    data-chart-library="gauge"
+                    data-units="%"
+                    data-gauge-max-value="100"
+                    data-width="25%"
+                    data-after="-60"
+                    data-points="60"
+                    data-title="107"
+                    data-units="I am alive!"
+                    data-colors="#FE2EF7"
+                    ></div>
+                <div data-netdata="system.ram"
+                    data-host="http://52.3.214.105:19999"
+                    data-dimensions="used"
+                    data-append-options="percentage"
+                    data-title="Used RAM"
+                    data-chart-library="easypiechart"
+                    data-units="%"
+                    data-easypiechart-max-value="100"
+                    data-width="12%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FE2EF7"
+                    ></div>
+                <div data-netdata="system.swap"
+                    data-host="http://52.3.214.104:19999"
+                    data-dimensions="used"
+                    data-append-options="percentage"
+                    data-title="Used SWAP"
+                    data-chart-library="easypiechart"
+                    data-units="%"
+                    data-easypiechart-max-value="100"
+                    data-width="12%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FE2EF7"
+                    ></div>
+                <div data-netdata="system.net"
+                    data-host="http://52.3.214.105:19999"
+                    data-dimensions="sent"
+                    data-title="NET Out"
+                    data-chart-library="easypiechart"
+                    data-units="kbps"
+                    data-width="14%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FE2EF7"
+                    ></div>
+                <div data-netdata="system.net"
+                    data-host="http://52.3.214.105:19999"
+                    data-dimensions="received"
+                    data-title="NET IN"
+                    data-chart-library="easypiechart"
+                    data-units="kbps"
+                    data-width="14%"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FE2EF7"
+                    ></div>
+         </div>
+     </div>
+  </div>
+
+
+         <div style="width: 49%; height:100%; align: center; display: inline-block;">
+        </div>
+                <div data-netdata="system.ram"
+                    data-host="http://52.3.214.106:19999"
+                    data-dimensions="user"
+                    data-chart-library="gauge"
+                    data-width="150px"
+                    data-after="-60"
+                    data-points="60"
+                    data-title="Yes! Realtime!"
+                    data-units="I am alive!"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.cpu"
+                    data-host="http://52.3.214.106:19999"
+                    data-dimensions="user"
+                    data-chart-library="dygraph"
+                    data-dygraph-theme="sparkline"
+                    data-width="200px"
+                    data-height="30px"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FF5555"
+                    ></div>
+                <div data-netdata="system.cpu"
+                    data-host="http://52.3.214.104:19999"
+                    data-dimensions="user"
+                    data-chart-library="dygraph"
+                    data-dygraph-theme="sparkline"
+                    data-width="200px"
+                    data-height="30px"
+                    data-after="-60"
+                    data-points="60"
+                    data-colors="#FF5555"
+                    ></div>
+            <br/>
+        </div>
+    </div>
 
     <div style="width: 100%; height: 24vh; text-align: center; display: inline-block;">
         <div style="width: 100%; height: 15px; text-align: center; display: inline-block;">
@@ -134,21 +460,43 @@ setTimeout(function(){
                     data-host="http://52.3.214.105:19999"
                     data-common-max="traffic"
                     data-common-min="traffic"
-                    data-title="IPv4 traffic on registry.my-netdata.io"
+                    data-title="IPv4 traffic on 105"
                     data-chart-library="dygraph"
-                    data-width="49%"
+                    data-width="24%"
                     data-height="100%"
                     data-after="-300"
                     ></div>
             <div data-netdata="system.ipv4"
-                    data-title="IPv4 traffic on your netdata server"
+                    data-host="http://52.3.214.106:19999"
+                    data-title="IPv4 traffic on 106"
                     data-common-max="traffic"
                     data-common-min="traffic"
                     data-chart-library="dygraph"
-                    data-width="49%"
+                    data-width="24%"
                     data-height="100%"
                     data-after="-300"
                     ></div>
+            <div data-netdata="system.ipv4"
+                    data-host="http://52.3.214.104:19999"
+                    data-common-max="traffic"
+                    data-common-min="traffic"
+                    data-title="IPv4 traffic on 104"
+                    data-chart-library="dygraph"
+                    data-width="24%"
+                    data-height="100%"
+                    data-after="-300"
+                    ></div>
+            <div data-netdata="system.ipv4"
+                    data-host="http://52.3.214.103:19999"
+                    data-title="IPv4 traffic on 103"
+                    data-common-max="traffic"
+                    data-common-min="traffic"
+                    data-chart-library="dygraph"
+                    data-width="24%"
+                    data-height="100%"
+                    data-after="-300"
+                    ></div>
+
         </div>
     </div>
 
